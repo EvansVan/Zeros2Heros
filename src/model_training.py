@@ -3,13 +3,12 @@ import argparse
 
 def load_data(file_path):
     # TODO: Load processed data from CSV file
+    pd.read_csv('../data/test.csv')
     return df
 
-def split_data(df):
-    # TODO: Split data into training and validation sets (the test set is already provided in data/test_data.csv)
-    return X_train, X_val, y_train, y_val
 
 def train_model(X_train, y_train):
+    
     # TODO: Initialize your model and train it
     return model
 
@@ -35,9 +34,9 @@ def parse_arguments():
 
 def main(input_file, model_file):
     df = load_data(input_file)
-    X_train, X_val, y_train, y_val = split_data(df)
-    model = train_model(X_train, y_train)
-    save_model(model, model_file)
+    #X_train, X_val, y_train, y_val = split_data(df)
+    #model = train_model(X_train, y_train)
+    #save_model(model, model_file)
 
 if __name__ == "__main__":
     args = parse_arguments()
